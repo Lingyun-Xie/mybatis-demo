@@ -1,5 +1,7 @@
 mybatis:
   mapper-locations: classpath*:mapper/*Mapper.xml
+  config-location: classpath:mybatis/mybatis-config.xml
+
 spring:
   datasource:
     username: root
