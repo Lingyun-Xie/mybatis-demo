@@ -7,9 +7,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * @author linyun.xie
- */
 @RestController
 @RequestMapping("/user")
 @AllArgsConstructor
