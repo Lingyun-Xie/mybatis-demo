@@ -15,7 +15,6 @@ public class DemoController {
 
     @GetMapping("/hello")
     public List<User> getAllUsers() {
-        List<User> users = userMapper.selectUserList();
-        return users;
+        return userMapper.selectUserList();
     }
 }
