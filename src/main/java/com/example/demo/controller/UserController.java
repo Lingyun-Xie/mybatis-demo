@@ -37,4 +37,9 @@ public class UserController {
         userMapper.deleteUserById(id);
         return "delete user success";
     }
+
+    @GetMapping("/filter")
+    public List<User> queryUserByName(@RequestParam(value = "username") String userName) {
+        return userMapper.queryUserByName(userName);
+    }
 }
