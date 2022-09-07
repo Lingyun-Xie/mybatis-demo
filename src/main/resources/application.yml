@@ -2,13 +2,16 @@ mybatis:
   mapper-locations: classpath*:mapper/*Mapper.xml
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
     password: 123456
     url: jdbc:mysql://10.201.64.125:3306/testdb?characterEncoding=utf8&serverTimezone=UTC
-    username: root
-    type: com.alibaba.druid.pool.DruidDataSource
-    schema:
-      - classpath:sql/init.sql
-    initialization-mode: always
-    platform: mysql
-    sql-script-encoding: UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  sql:
+    init:
+      schema-locations:
+        - classpath:sql/schema.sql
+      data-locations:
+        - classpath:sql/data.sql
+      platform: mysql
+      encoding: UTF-8
+      mode: always
