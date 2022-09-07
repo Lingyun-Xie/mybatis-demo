@@ -9,4 +9,9 @@
         <typeAlias alias="User" type="com.example.demo.model.User"/>
         <package name="com.example.demo.model"/>
     </typeAliases>
+
+    <mappers>
+        <mapper resource="mapper/UserMapper.xml"/>
+<!--        <package name="mapper"/>-->
+    </mappers>
 </configuration>
