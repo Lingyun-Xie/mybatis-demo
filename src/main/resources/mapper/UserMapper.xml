@@ -2,6 +2,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.UserMapper">
+    <cache/>
     <resultMap id="user" type="User">
         <id column="id"/>
         <result column="username" property="userName"/>
@@ -16,11 +17,11 @@
         select * from t_user where id = #{id};
     </select>
 
-    <insert id="saveUser" parameterType="User">
+    <insert id="saveUser" parameterType="User" flushCache="true">
         insert into t_user (username,age) values (#{userName},#{age})
     </insert>
 
-    <delete id="deleteUserById" parameterType="int">
+    <delete id="deleteUserById" parameterType="int" flushCache="true">
         delete from t_user where id = #{id}
     </delete>
 
