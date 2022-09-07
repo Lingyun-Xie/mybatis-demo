@@ -5,7 +5,9 @@ import com.example.demo.model.User;
 import java.util.List;
 
 public interface UserMapper {
-    List<User> getAllUsers();
+    List<User> getUsers();
 
     List<User> getUserById(Integer id);
+
+    void save(User user);
 }
