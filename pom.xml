@@ -8,11 +8,12 @@
         <version>2.7.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.example</groupId>
     <artifactId>mybatis-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>mybatis-demo</name>
-    <description>Demo project for Spring Boot</description>
+
     <properties>
         <java.version>11</java.version>
         <springboot.version>2.7.3</springboot.version>
@@ -49,6 +50,7 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
