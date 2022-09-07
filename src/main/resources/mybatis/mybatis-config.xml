@@ -2,4 +2,8 @@
     <settings>
         <setting name="cacheEnabled" value="true"/>
     </settings>
+
+    <typeAliases>
+        <typeAlias alias="User" type="com.example.demo.model.User"/>
+    </typeAliases>
 </configuration>
