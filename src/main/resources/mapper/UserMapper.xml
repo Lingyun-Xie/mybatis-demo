@@ -8,16 +8,20 @@
         <result column="age" property="age"/>
     </resultMap>
 
-    <select id="getUsers" resultType="com.example.demo.model.User">
+    <select id="queryAllUsers" resultType="com.example.demo.model.User">
         select * from t_user;
     </select>
 
-    <select id="getUserById" parameterType="Integer" resultType="com.example.demo.model.User">
+    <select id="queryUserById" parameterType="Integer" resultType="com.example.demo.model.User">
         select * from t_user where id = #{id};
     </select>
 
-    <insert id="save" parameterType="com.example.demo.model.User">
+    <insert id="saveUser" parameterType="com.example.demo.model.User">
         insert into t_user (username,age) values (#{userName},#{age})
     </insert>
+
+    <delete id="deleteUserById" parameterType="int">
+        delete from t_user where id = #{id}
+    </delete>
 
 </mapper>

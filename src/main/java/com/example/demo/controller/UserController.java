@@ -17,18 +17,24 @@ public class UserController {
     private UserMapper userMapper;
 
     @GetMapping
-    public List<User> getUsers() {
-        return userMapper.getUsers();
-    }
-
-    @GetMapping("/{id}")
-    public List<User> getUserById(@PathVariable(value = "id") Integer id) {
-        return userMapper.getUserById(id);
+    public List<User> qureyAllUsers() {
+        return userMapper.queryAllUsers();
     }
 
     @PostMapping
     public String saveUser(@RequestBody User user) {
-        userMapper.save(user);
-        return "success";
+        userMapper.saveUser(user);
+        return "insert user success";
+    }
+
+    @GetMapping("/{id}")
+    public User queryUserById(@PathVariable(value = "id") Integer id) {
+        return userMapper.queryUserById(id);
+    }
+
+    @DeleteMapping("/{id}")
+    public String deleteUserById(@PathVariable(value = "id") Integer id) {
+        userMapper.deleteUserById(id);
+        return "delete user success";
     }
 }
