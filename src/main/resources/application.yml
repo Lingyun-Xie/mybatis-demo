@@ -6,3 +6,9 @@ spring:
     password: 123456
     url: jdbc:mysql://10.201.64.125:3306/testdb?characterEncoding=utf8&serverTimezone=UTC
     username: root
+    type: com.alibaba.druid.pool.DruidDataSource
+    schema:
+      - classpath:sql/init.sql
+    initialization-mode: always
+    platform: mysql
+    sql-script-encoding: UTF-8
