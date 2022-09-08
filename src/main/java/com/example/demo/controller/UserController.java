@@ -39,4 +39,10 @@ public class UserController {
     public List<User> queryUserByName(@RequestParam(value = "username") String userName) {
         return userMapper.queryUserByName(userName);
     }
+
+    @PostMapping("/update")
+    public String updateUserName(@RequestBody User user) {
+        userMapper.updateUserName(user);
+        return "update username success";
+    }
 }

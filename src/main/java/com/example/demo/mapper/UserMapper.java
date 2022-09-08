@@ -16,4 +16,6 @@ public interface UserMapper {
 
     @Select("select * from t_user where username = #{userName}")
     List<User> queryUserByName(String userName);
+
+    void updateUserName(User user);
 }
